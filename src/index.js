@@ -1,10 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
+import App from './App'; //./App.js->js 부분은 생략됨
 // import reportWebVitals from './reportWebVitals'; 
 
-const root = ReactDOM.createRoot(document.getElementById('root'));//html의 div를 가져와서 돔트리의 루트로 만듦
+const root = ReactDOM.createRoot(document.getElementById('root'));//html의 div를 가져와서 가상 돔을 만듦
 root.render(//root에 앱을 끼워넣는다는 의미(html 태그를 리턴함->html에 직접 작성하지 않은 태그들이 들어감)
   <React.StrictMode>
     <App />

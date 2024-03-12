@@ -8,7 +8,13 @@ function App() { //App모듈 = App함수
   <> {/* 프래그먼트 태그 */}
   {/* 프래그먼트 태그 안으로는 jsx문법 사용 */}
   <div className="App">
-    <MyClock />
+      {/* <MainHeader />
+      <Hello />
+      <Hello />
+      <Hello />
+      <Hello />
+      <Hello /> */}
+        <MyClock />
   </div>
   </>
   );
