@@ -6,9 +6,9 @@ import App from './App'; //./App.js->js 부분은 생략됨
 
 const root = ReactDOM.createRoot(document.getElementById('root'));//html의 div를 가져와서 가상 돔을 만듦
 root.render(//root에 앱을 끼워넣는다는 의미(html 태그를 리턴함->html에 직접 작성하지 않은 태그들이 들어감)
-  <React.StrictMode>
+  // <React.StrictMode> 
     <App />
-  </React.StrictMode>
+  // </React.StrictMode>
 );
 
 // If you want to start measuring performance in your app, pass a function

@@ -29,7 +29,6 @@ function Hello () {
            <p>
             {currentTime.toLocaleTimeString()}
            </p>
-           
            <span style={st1}> Hello </span>
            <span style={{display: "inline-flex", margin: "10px"}}> 
            { n < 10 && "0"} 

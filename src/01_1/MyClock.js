@@ -1,6 +1,6 @@
 import MyClockImage from "./MyClockImage";
 import MyClockTime from "./MyClockTime";
-import './MyClock.css'
+import './MyClock.css';
 
 function MyClock () {
     return(

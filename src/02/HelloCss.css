@@ -1,0 +1,15 @@
+.hellomain {
+    background-color: rgb(255, 255, 255);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+}
+
+.ch1 {
+    color:cyan;
+}
