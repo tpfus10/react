@@ -4,6 +4,9 @@ import Hello from './01/Hello';
 import MyClock from './01_1/MyClock';
 import HelloCss from './02/HelloCss';
 import { ImHome } from "react-icons/im";
+import MyDiv1 from './03_1/MyDiv1'
+import MyList from './04/MyList';
+import MyListMain from './04/MyListMain';
 
 function App() { //App모듈 = App함수
   return (//App이 리턴하는 태그
@@ -29,8 +32,8 @@ function App() { //App모듈 = App함수
       <div>리액트 실습</div>
       <div><ImHome className='text-2xl text-white'/></div>
     </header>
-    <main className='grow'>
-      <HelloCss />
+    <main className='grow flex flex-col justify-center items-center'>
+      <MyListMain />
     </main>
     <footer className='flex justify-center items-center
                        text-black
