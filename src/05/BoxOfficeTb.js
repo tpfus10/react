@@ -21,7 +21,8 @@ export default function BoxOfficeTb() {
     const items = boxlist.map(item => (
         <tr key= {item.movieCd} 
         className="text-center bg-white text-black h-10 hover:bg-blue-50 hover:font-bold" 
-        onClick={()=>handleClick(item)}>
+        //onClick의 매개변수로 item을 전달하여 items 함수 내에 선언된 데이터를 이용할 수 있게 함
+        onClick={()=>handleClick(item)}> 
             <td>{item.rank}</td>
             <td className="text-left">{item.movieNm}</td>
             <td className="w-1/5">{parseInt(item.salesAmt).toLocaleString()}</td>
