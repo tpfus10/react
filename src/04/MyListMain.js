@@ -8,7 +8,7 @@ export default function MyListMain() {
         title= {item.title}
         imgUrl= {item.imgUrl}
         content= {item.content}
-        key= {item.title}
+        key= {item.title} 
         />
     );
     
