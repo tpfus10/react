@@ -5,6 +5,7 @@ import { useState } from "react";
 
 export default function BoxOfficeTb() {
 
+    //state 변수
     const[exp, setExp] = useState("영화를 선택하세요.");
     
     const handleClick = (mv) => {
@@ -15,6 +16,7 @@ export default function BoxOfficeTb() {
                 `);
     }
 
+    //영화 목록 json에서 가져오기
     const boxlist = BoxOffice.boxOfficeResult.dailyBoxOfficeList;
     console.log(boxlist)
 
