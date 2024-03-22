@@ -15,7 +15,7 @@ export default function FoodMain() {
     const c1Bts = c1.map(item =>
         <TailButton
             caption={item}
-            hadleClick={() => hadleList(item)}
+            hadleClick={() => hadleList(item)} //handleList함수에 citem으로 전달됨
             color="rose"
             key={item} />
     )

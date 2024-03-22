@@ -11,6 +11,7 @@ import BoxOfficeTb from './05_1/BoxOfficeTb'
 import Lotto from './06/Lotto';
 import FoodMain from './07/FoodMain';
 import MyClock from './08/MyClock2';
+import TrafficMain from './09/TrafficMain';
 
 function App() { //App모듈 = App함수
   return (//App이 리턴하는 태그
@@ -37,7 +38,7 @@ function App() { //App모듈 = App함수
       <div><ImHome className='text-2xl text-white'/></div>
     </header>
     <main className='grow flex flex-col justify-center items-center'>
-      <MyClock />
+      <TrafficMain />
     </main>
     <footer className='flex justify-center items-center
                        text-black

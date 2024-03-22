@@ -13,7 +13,7 @@ export default function TailButton({caption, hadleClick, color}) {
     'red' : 'hover:bg-red-400',
     'lime' : 'hover:bg-lime-400',
     'orange' : 'hover:bg-orange-400',
-    'rose'    : 'bg-rose-400'
+    'rose'    : 'hover:bg-rose-400'
   }
 
   const bStyle = `px-4 py-2 m-2 rounded-md
