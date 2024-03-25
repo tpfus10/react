@@ -12,6 +12,9 @@ import Lotto from './06/Lotto';
 import FoodMain from './07/FoodMain';
 import MyClock from './08/MyClock2';
 import TrafficMain from './09/TrafficMain';
+import RefVal from './10/RefVal';
+import Refinput from './10/Refinput';
+import BoxOffice from './05/BoxOffice';
 
 function App() { //App모듈 = App함수
   return (//App이 리턴하는 태그
@@ -38,7 +41,7 @@ function App() { //App모듈 = App함수
       <div><ImHome className='text-2xl text-white'/></div>
     </header>
     <main className='grow flex flex-col justify-center items-center'>
-      <TrafficMain />
+      <BoxOffice />
     </main>
     <footer className='flex justify-center items-center
                        text-black
