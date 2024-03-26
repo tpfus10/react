@@ -15,6 +15,8 @@ import TrafficMain from './09/TrafficMain';
 import RefVal from './10/RefVal';
 import Refinput from './10/Refinput';
 import BoxOffice from './05/BoxOffice';
+import GalleryCard from './11/GalleryCard';
+import GalleryMain from './11/GalleryMain';
 
 function App() { //App모듈 = App함수
   return (//App이 리턴하는 태그
@@ -41,7 +43,7 @@ function App() { //App모듈 = App함수
       <div><ImHome className='text-2xl text-white'/></div>
     </header>
     <main className='grow flex flex-col justify-center items-center'>
-      <BoxOffice />
+      <GalleryMain />
     </main>
     <footer className='flex justify-center items-center
                        text-black
