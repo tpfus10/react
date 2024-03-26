@@ -15,7 +15,7 @@ export default function GalleryCard({imgUrl, title, ptitle, ktag}) {
     }
 
     return (
-        <div className="max-w-sm rounded overflow-hidden shadow-lg">
+        <div className="max-w-sm rounded overflow-auto shadow-lg">
             <img className="w-full"
                 src={imgUrl}
                 alt={title} />
