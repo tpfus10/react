@@ -44,7 +44,7 @@ export default function BoxOffice() {
         let url = `https://kobis.or.kr/kobisopenapi/webservice/rest/boxoffice/searchDailyBoxOfficeList.json?`;
         url = url + `key=${process.env.REACT_APP_MV_API}&targetDt=${dt}`;
 
-        console.log(url)
+        console.log(url);
 
         fetch(url)
         .then(resp => resp.json())
