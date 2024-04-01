@@ -10,7 +10,7 @@ export default function TailInput1({type, ph, ref1, handleChange}) {
     text-sm rounded-lg
     focus:ring-blue-500
     focus:border-blue-500
-            block w-5/6 p-2.5'
+            block w-full p-2.5'
             placeholder={ph}>
     </input>
   )

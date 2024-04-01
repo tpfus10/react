@@ -17,10 +17,10 @@ export default function Lotto() {
         console.log(nums)
         nums.splice(6, 0, '+');
 
-        const tm = nums.map((item, idx) => 
-            idx === 6 ? <span key= {`sp${item}`}
-                        className="text-2xl font-bold"> {item} </span>
-                      : <TailBall n={item} key={`ball${item}`} />
+        const tm = nums.map((item, idx) =>
+            idx === 6 ? <span key={`sp${item}`}
+                className="text-2xl font-bold"> {item} </span>
+                : <TailBall n={item} key={`ball${item}`} />
         );
 
         setBallTags(tm);
@@ -32,9 +32,11 @@ export default function Lotto() {
             <span className="flex justify-center items-center my-10">
                 {ballTags}
             </span>
-            <TailButton caption='로또번호생성'
-                hadleClick={hadleLottoClick}
-                color="blue" />
+            <div>
+                <TailButton caption='로또번호생성'
+                    hadleClick={hadleLottoClick}
+                    color="blue" />
+            </div>
         </div>
     )
 }

@@ -1,4 +1,3 @@
-import BoxOfficeData from './BoxOfficeDate.json'
 import { TbTriangleFilled, TbTriangleInvertedFilled } from "react-icons/tb"; //라이브러리가 같으면 콤마로 이어붙여서 써도 됨
 import { FaGripLines } from "react-icons/fa6";
 import { useState, useEffect, useRef } from "react";

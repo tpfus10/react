@@ -1,4 +1,5 @@
 import './App.css';
+import { BrowserRouter, Routes, Route, useNavigate, Link } from 'react-router-dom';
 import MainHeader from './01/MainHeader';
 import Hello from './01/Hello';
 // import MyClock from './01_1/MyClock';
@@ -18,43 +19,73 @@ import BoxOffice from './05/BoxOffice';
 import GalleryCard from './11/GalleryCard';
 import GalleryMain from './11/GalleryMain';
 import Festival from './12/Festival';
+import RouteMain from './13/RouteMain';
+import Frcst from './14/Frcst';
 
 function App() { //App모듈 = App함수
-  return (//App이 리턴하는 태그
-  <> {/* 프래그먼트 태그 */}
-  {/* 프래그먼트 태그 안으로는 jsx문법 사용 */}
 
-  {/* <div className="App">
+  return (//App이 리턴하는 태그
+    <> {/* 프래그먼트 태그 */}
+      {/* 프래그먼트 태그 안으로는 jsx문법 사용 */}
+
+      {/* <div className="App">
     <MyClock />
   </div> */}
-
-  <div className='flex flex-col 
+      <BrowserRouter>
+        <div className='flex flex-col 
                   w-full 
                   max-w-screen-xl
                   mx-auto
                   h-screen
                   overscroll-y-auto
-                  '> 
-    <header className='flex justify-between items-center
+                  '>
+          <header className='flex justify-between items-center
                       h-20 p-10 
                       text-xl font-bold text-white
                       bg-red-300
                       '>
-      <div>리액트 실습</div>
-      <div><ImHome className='text-2xl text-white'/></div>
-    </header>
-    <main className='grow flex flex-col justify-center items-center'>
-      <Festival />
-    </main>
-    <footer className='flex justify-center items-center
+            <div>리액트 실습</div>
+            <div className='flex justify-between items-center
+                            h-20 p-10'>
+              <div className='mx-5 p-2 hover:text-red-500'>
+                <Link to="/lotto"> Lotto </Link>
+              </div>
+              <div className='mx-5 p-2 hover:text-red-500'>
+                <Link to="/boxoffice"> Movie </Link>
+              </div>
+              <div className='mx-5 p-2 hover:text-red-500'>
+                <Link to="/traffic"> Traffic </Link>
+              </div>
+              <div className='mx-5 p-2 hover:text-red-500'>
+                <Link to="/Frcst"> Forecast </Link>
+              </div>
+              <Link to="/">
+                Home
+                {/* <ImHome className='text-2xl text-white hover:text-red-500' /> */}
+              </Link>
+            </div>
+          </header>
+
+          <main className='grow flex flex-col justify-center items-center'>
+            <Routes>
+              <Route path='/' element={<MyClock />} />
+              <Route path='/lotto' element={<Lotto />} />
+              <Route path='/boxoffice' element={<BoxOffice />} />
+              <Route path='/traffic' element={<TrafficMain />} />
+              <Route path='/Frcst' element={<Frcst />} />
+            </Routes>
+          </main>
+
+          <footer className='flex justify-center items-center
                        text-black
                        bg-red-100
                        h-20
-                      '>
-      ⓒ 2024 LeeSeRyeon.All rights reserved.
-    </footer>
-  </div>
-  </>
+                       '>
+            ⓒ 2024 LeeSeRyeon.All rights reserved.
+          </footer>
+        </div>
+      </BrowserRouter>
+    </>
   );
 }
 
