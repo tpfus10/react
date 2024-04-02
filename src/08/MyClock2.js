@@ -5,8 +5,8 @@ function MyClock () {
     return(
         <div className="w-full h-full 
                         flex flex-col justify-center items-center
-                        bg-black
-                        text-white">
+                        bg-white
+                        text-black">
         <MyClockImage />
         <MyClockTime />
         </div>

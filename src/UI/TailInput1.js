@@ -1,7 +1,6 @@
 export default function TailInput1({type, ph, ref1, handleChange}) {
   return (
     <input type={type}
-    max = "2024-03-24"
     ref={ref1}
     onChange={handleChange}
     className='bg-gray-50 

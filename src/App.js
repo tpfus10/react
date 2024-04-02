@@ -21,6 +21,8 @@ import GalleryMain from './11/GalleryMain';
 import Festival from './12/Festival';
 import RouteMain from './13/RouteMain';
 import Frcst from './14/Frcst';
+import UltraSrtFcst from './14/UltraSrtFcst';
+import VilageFcst from './14/VilageFcst';
 
 function App() { //App모듈 = App함수
 
@@ -57,7 +59,7 @@ function App() { //App모듈 = App함수
                 <Link to="/traffic"> Traffic </Link>
               </div>
               <div className='mx-5 p-2 hover:text-red-500'>
-                <Link to="/Frcst"> Forecast </Link>
+                <Link to="/frcst"> Forecast </Link>
               </div>
               <Link to="/">
                 Home
@@ -72,7 +74,9 @@ function App() { //App모듈 = App함수
               <Route path='/lotto' element={<Lotto />} />
               <Route path='/boxoffice' element={<BoxOffice />} />
               <Route path='/traffic' element={<TrafficMain />} />
-              <Route path='/Frcst' element={<Frcst />} />
+              <Route path='/frcst' element={<Frcst />} />
+              <Route path='/ultra/:dt/:area/:x/:y' element={<UltraSrtFcst />} />
+              <Route path='/vilage/:dt/:area/:x/:y' element={<VilageFcst />} />
             </Routes>
           </main>
 
