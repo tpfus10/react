@@ -7,12 +7,14 @@ export default function TrafficNav({ title, category, sel, setSel}) {
     }
     
     const bts = category.map(item => 
+        <div className="mx-2">
         <TailButton 
         caption={item}
         key={item}
         hadleClick={() => handleBtClick(item)}
         color={item === sel ? "rose" : "blue"}
         />
+        </div>
         );
 
    
@@ -22,10 +24,9 @@ export default function TrafficNav({ title, category, sel, setSel}) {
             <h1 className="text-xl font-bold text-slate-700">
                 교통사고 {title}
             </h1>
-            <div>
+            <div className="flex"> 
                 {bts}
             </div>
-
         </div>
     )
 }
