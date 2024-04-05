@@ -38,7 +38,7 @@ export default function Frcst() {
 
     const navigator = useNavigate();
     //초단기예보
-    const handleUltra = () => {
+    const handleFrst = (loc) => {
         if(dt === '' || dt === undefined) {
             alert('날짜를 선택하세요');
             dRef.current.focus();
@@ -47,19 +47,23 @@ export default function Frcst() {
             alert('지역을 선택하세요');
             sRef.current.focus();
         }
-        navigator(`/ultra/${dt}/${area}/${x}/${y}`) // ':' 넣으면 안 됨
-    };
+        
+        //1) 네비게이터 사용
+        //navigator(`/${loc}/${dt}/${area}/${x}/${y}`) // ':' 넣으면 안 됨
 
-    //단기예보
-    const handleVilage = () => {
-        navigator(`/vilage/${dt}/${area}/${x}/${y}`)
+        //2) 쿼리스트링 사용
+        let gubun = '';
+        if(loc === 'ultra') gubun = '초단기예보';
+        else gubun = "단기예보";
+
+        navigator(`/FrcstList?dt=${dt}&area=${area}&x=${x}&y=${y}&gubun=${gubun}`);
     };
 
     return (
         <>
-            <h1 className="w-11/12 font-bold text-2xl text-slate-700 mb-20 mr-30">단기예보 선택</h1>
-            <div className="w-11/12 grid grid-cols-1
-                        md:grid-cols-2 gap-2 p-2">
+            <h1 className="w-11/12 font-bold text-2xl text-slate-700 mb-20 mr-30"> 🌞단기예보 선택</h1>
+            <div className="w-11/12 grid grid-cols-1 
+                        md:grid-cols-2 gap-2 gap-y-10 p-2">
                 <div>
                     <TailInput1 type="date"
                         ref1={dRef}
@@ -76,12 +80,12 @@ export default function Frcst() {
                 <div>
                     <TailButton caption="초단기예보"
                         color="rose" 
-                        hadleClick={handleUltra}/>
+                        hadleClick={() => {handleFrst('ultra')}}/>
                 </div>
                 <div>
                     <TailButton caption="단기예보"
                         color="rose" 
-                        hadleClick={handleVilage}/>
+                        hadleClick={() => {handleFrst('vilage')}}/>
                 </div>
             </div>
         </>

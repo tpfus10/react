@@ -4,17 +4,18 @@ import TailSelect from "../UI/TailSelect";
 import getcode from "./getcode.json"
 
 export default function UltraSrtFcst() {
+    //주소의 경로에서 값을 받아오기
     const dt = useParams().dt;
     const area = useParams().area;
-
     const x = useParams().x;
     const y = useParams().y;
     const gubun = "초단기예보";
 
     //select 박스 옵션
     const ops = getcode.filter(item => item.예보구분 === gubun)
-        .map(item => `${item.항목명}(${item.항목값})`);
+        .map(item => `${item.항목명} (${item.항목값}) `);
 
+    //Ref 변수 선언
     const itemRef = useRef();
 
     //fetch data state 변수로 저장
@@ -70,8 +71,8 @@ export default function UltraSrtFcst() {
             itemRef.current.focus();
             return;
         }
-        setSelItemName(itemRef.current.value.split('(')[0])
-        setSelItem(itemRef.current.value.split('(')[1].replace(')', ''))
+        setSelItemName(itemRef.current.value.split(' (')[0])
+        setSelItem(itemRef.current.value.split(' (')[1].replace(') ', ''))
     }
 
     return (

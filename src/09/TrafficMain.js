@@ -102,7 +102,7 @@ export default function TrafficMain() {
             />}
             <div className="w-11/12 grid grid-cols-2 
                                 md:grid-cols-5 sm:grid-cols-3
-                                gap-4">
+                                gap-4 mb-10">
                 {info}
             </div>
         </div>
