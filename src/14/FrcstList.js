@@ -89,7 +89,7 @@ export default function FrcstList() {
 
 
     return (
-        <div className="w-full h-full flex flex-col justify-between items-center">
+        <div className="w-full h-full flex flex-col justify-start items-center">
             <div className="w-10/12 grid grid-cols-1 mb-3
                             sm:grid-cols-2 gap-4 pt-4">
                 <div className="text-slate-700 font-bold text-xl p-4">{`${area} ${gubun} (${dt.substring(0, 4)}/${dt.substring(4, 6)}/${dt.substring(6, 8)})`}</div>
