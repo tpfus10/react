@@ -81,8 +81,8 @@ export default function BoxOffice() {
             </div>
             <table className="MV w-4/5">
                 <thead>
-                    <tr className="text-center bg-blue-400 text-white h-10">
-                        <th className="w-10">순위</th>
+                    <tr className="text-center bg-blue-400 text-white h-10 w-full">
+                        <th className="w-12 pl-3">순위</th>
                         <th className="">영화명</th>
                         <th className="w-1/5">매출액</th>
                         <th className="w-1/5">관객수</th>
